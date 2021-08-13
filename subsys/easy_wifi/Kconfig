@@ -1,0 +1,22 @@
+menuconfig EASY_WIFI
+	bool "Easy Wi-Fi API"
+
+if EASY_WIFI
+
+choice WIFI_DEVICE
+	bool "Network interface device"
+	default WIFI_DEVICE_DEFAULT
+
+config WIFI_DEVICE_DEFAULT
+	bool "Default"
+
+config WIFI_DEVICE_CUSTOM
+	bool "Custom"
+
+endchoice
+
+config WIFI_DEVICE_CUSTOM_NAME
+	string "Device name"
+	depends on WIFI_DEVICE_CUSTOM
+
+endif # EASY_WIFI

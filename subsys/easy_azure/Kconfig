@@ -1,0 +1,46 @@
+menuconfig EASY_AZURE
+	bool "Easy Azure API"
+	depends on AZ
+	depends on MBEDTLS
+	depends on MQTT_LIB
+	depends on MQTT_LIB_TLS
+	depends on NETWORKING
+	depends on NET_SOCKETS_SOCKOPT_TLS
+	select AZ_IOT_HUB
+	select MBEDTLS_PEM_CERTIFICATE_FORMAT
+	select TLS_CREDENTIALS
+
+if EASY_AZURE
+
+config EASY_AZURE_IOT_HUB_CNAME
+	string "IoT Hub host name (full CName)"
+	help
+	  Full CName of the IoT Hub
+
+	  Example: 'name.azure-devices.net'
+
+config EASY_AZURE_SEC_TAG
+	int "TLS Secure TAG"
+	default 57619
+	help
+	  Secure tag, a reference to TLS credentials
+
+	  Secure tag can be used to reference credentials after it was
+	  registered in the system.
+
+	  The default is an arbitrary high number to avoid interference with
+	  other projects.
+
+config EASY_AZURE_DEVICE_TWIN
+	bool "Manipulate device twin properties"
+
+config EASY_AZURE_C2D_MESSAGES
+	bool "Receive cloud-to-device messages"
+
+config EASY_AZURE_D2C_MESSAGES
+	bool "Send device-to-cloud messages"
+
+config EASY_AZURE_DIRECT_METHODS
+	bool "Receive direct methods"
+
+endif # EASY_AZURE

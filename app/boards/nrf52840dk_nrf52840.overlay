@@ -1,0 +1,23 @@
+/ {
+	heartbeat {
+		compatible = "tt,heartbeat";
+		label = "HEARTBEAT";
+		led-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+	};
+};
+
+&arduino_serial {
+	status = "okay";
+
+	esp-wifi-modem {
+		compatible = "espressif,esp-at";
+		label = "WIFI";
+		target-speed = <1000000>;
+
+		/*
+		 * Arduino Click Shield - mikroBUS2
+		 */
+		power-gpios = <&arduino_header 15 GPIO_ACTIVE_HIGH>; /* D9 */
+		reset-gpios = <&arduino_header  2 GPIO_ACTIVE_LOW>;  /* A2 */
+	};
+};

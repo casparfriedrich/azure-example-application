@@ -1,0 +1,2 @@
+add_subdirectory_ifdef(CONFIG_EASY_AZURE easy_azure)
+add_subdirectory_ifdef(CONFIG_EASY_WIFI easy_wifi)
