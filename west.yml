@@ -1,6 +1,4 @@
 manifest:
-  version: "0.10"
-
   remotes:
     - name: github
       url-base: https://github.com
@@ -13,7 +11,7 @@ manifest:
     - name: nrf
       remote: github
       repo-path: nrfconnect/sdk-nrf.git
-      revision: v2.1.0
+      revision: v2.1.2
       path: nrf
       import: true
     - name: azure-sdk-for-c
@@ -23,4 +21,4 @@ manifest:
       path: modules/lib/azure-sdk-for-c
 
   self:
-    path: example
+    path: application

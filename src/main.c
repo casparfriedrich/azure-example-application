@@ -1,10 +1,11 @@
+#include "easy_azure.h"
+#include "easy_wifi.h"
+
 #include <zephyr/posix/time.h>
 
 #include <cJSON.h>
 #include <cJSON_os.h>
 #include <device.h>
-#include <easy_azure.h>
-#include <easy_wifi.h>
 #include <init.h>
 #include <logging/log.h>
 #include <net/sntp.h>

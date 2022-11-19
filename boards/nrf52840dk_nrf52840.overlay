@@ -1,11 +1,3 @@
-/ {
-	heartbeat {
-		compatible = "tt,heartbeat";
-		label = "HEARTBEAT";
-		led-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-	};
-};
-
 &arduino_serial {
 	status = "okay";
 

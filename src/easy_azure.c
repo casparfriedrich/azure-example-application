@@ -1,9 +1,10 @@
+#include "easy_azure.h"
+
 #include <errno.h>
 #include <stdio.h>
 
 #include <azure/az_iot.h>
 #include <drivers/hwinfo.h>
-#include <easy_azure.h>
 #include <init.h>
 #include <logging/log.h>
 #include <net/mqtt.h>

@@ -1,1 +1,8 @@
-rsource "subsys/Kconfig"
+menu "Azure Example Application"
+rsource "Kconfig.easy_azure"
+rsource "Kconfig.easy_wifi"
+endmenu
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu

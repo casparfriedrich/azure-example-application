@@ -1,13 +1,13 @@
 menuconfig EASY_AZURE
 	bool "Easy Azure API"
-	depends on AZ
-	depends on MBEDTLS
-	depends on MQTT_LIB
-	depends on MQTT_LIB_TLS
-	depends on NETWORKING
-	depends on NET_SOCKETS_SOCKOPT_TLS
+	select AZ
 	select AZ_IOT_HUB
+	select MBEDTLS
 	select MBEDTLS_PEM_CERTIFICATE_FORMAT
+	select MQTT_LIB
+	select MQTT_LIB_TLS
+	select NETWORKING
+	select NET_SOCKETS_SOCKOPT_TLS
 	select TLS_CREDENTIALS
 
 if EASY_AZURE
